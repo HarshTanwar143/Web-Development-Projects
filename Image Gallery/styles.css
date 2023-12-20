@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;         /*iski vajah se ye center me h , padding to 20 hi h but ye padding se nhi iski vaah se center me hai*/
+    padding: 20px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+
+.gallery{
+    display: flex;                /*wrap nhi lgaunga to sari ki sari content single line me aajayega*/
+    flex-wrap: wrap;            /*agar same row me place nhi ho skte sare element to ve next row me aajayenge*/
+    justify-content: space-between  ;
+}
+
+.card{                   /*yha height nhi di hAI kyuki flex me vo puri height leta tha width apne content ke hisaab se le tha but height puri leta tha , yha bhi puri li hi , wrap hogye the boxes to usske acc. height leli hai */
+    width:  32%;         /*ye card ki height bnai hai abhi hmne , image ki abhi utni hi hai*/ 
+    position: relative;
+    border-radius: 10px ;   /*32% karne se mujhe pta lg gya ki meri 3 pics aane vali h yha pe*/
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+
+
+.card img{
+    width: 100%;
+    height: 100%;
+    filter:grayscale(100%); 
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+}
+
+
+.card:hover{
+    transform:scale(1.03);
+    transition: 0.5s;
+    filter: drop-shadow(0 0 10px #333);
+    /* box-shadow: 0 0 10px #333; */
+}
+
+
+.card:hover img{
+    filter: grayscale(0);
+}
+
+
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;         /* jb hover nhi kr rha hu to tb vo nhi dikhna chahiye issliye opacity 0 rkhi */
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%,rgba(255,255,255,0) 100%);
+    transition: 0.5s;
+}
+
+
+.card:hover figcaption{
+    opacity: 1;
+    transform: scale(1.03);
+}
