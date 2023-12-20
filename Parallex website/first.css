@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px ;
+}
+
+.container{
+    position: relative;             /*overlap ke liye hmesha absolute position ka use krenge*/
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;       /*mujhe abhi 3d position htani nhi hai ussi ko btane ke liye ye likha*/
+    z-index: -1;
+}
+
+
+.background{
+    transform: translateZ(-39px) scale(5) ;
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+
+.background , .foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;            /*iss se hmm ye layer ki positions ko fix karenge ki kon aage rhega kon piche z axis pe*/
+}
+
+
+h1{
+    position: absolute;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10rem;
+    top: 5rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0,3);
+}
+
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.secheading{
+    font-size: 5rem;
+    padding: 0 10rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text{
+    font-size: 1.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 3rem 10rem ;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    height: 500px;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    color: black;
+    font-size: 3.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    /* transform: translateX(-50%) translateX(-50%); */
+    top: 48%;
+    left: 40%;
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+ 
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);
+}
+
+
+
+
+
+
+
