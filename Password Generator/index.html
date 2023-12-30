@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <div class="container">
+
+            <!-- first heading -->
+            <h1>PASSWORD GENERATOR</h1>
+
+            <!-- output field -->
+            <div class="display-container" >
+                <input class="display" placeholder="Password" readonly  password-display>
+                <button class="copyButton" copy-btn>
+                    <span class="tooltip" click-msg></span>
+                    <img src="assets/copy.svg" height="23" width="23" alt="">
+                </button>
+            </div>
+
+            <!-- input field -->
+            <div class="input-container">
+                <!-- password length -->
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p pass-length>0</p>
+                </div>
+
+                <!-- length slider -->
+                <input type="range" min="1" max="20" class="slider" step="1" pass-slider>
+                
+                <!-- checkboxes items -->
+                <div class="CheckBox-Section">
+                    <div class="check">
+                        <input type="checkbox" id="pass-uppercase">
+                        <label for="pass-uppercase">Include Uppercase Letter</label>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="pass-lowercase">
+                        <label for="pass-lowercase">Include Lowercase Letter</label>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="pass-numbers">
+                        <label for="pass-numbers">Include Numbers</label>
+                    </div>
+
+                    <div class="check">
+                        <input type="checkbox" id="pass-symbols">
+                        <label for="pass-symbols">Include Symbols</label>
+                    </div>
+                </div>
+
+                <!-- password strength measuring -->
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div class="indicator" pass-indicator></div>
+                </div>
+
+                <!-- password generator button -->
+                <button class="generateButton" pass-generator>
+                    GENERATE PASSWORD
+                </button>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
